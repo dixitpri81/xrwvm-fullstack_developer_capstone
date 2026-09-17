@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Cars Dealership</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f8f9fa; }
+        .navbar { background-color: #1a1a2e; }
+        .navbar-brand, .nav-link { color: #fff !important; }
+        .nav-item.active .nav-link { border-bottom: 2px solid #e94560; }
+        .hero { background: linear-gradient(135deg, #1a1a2e, #16213e); color: white; padding: 60px 0; text-align: center; }
+        .contact-card { border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); padding: 30px; margin-bottom: 30px; background: white; }
+        .contact-icon { font-size: 2rem; margin-bottom: 10px; }
+        footer { background-color: #1a1a2e; color: #fff; padding: 20px 0; text-align: center; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="/">🚗 Cars Dealership</a>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
+            <li class="nav-item active"><a class="nav-link" href="/contact">Contact Us</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="hero">
+    <h1>Contact Us</h1>
+    <p>We are here to help you find your perfect car</p>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="contact-card text-center">
+                <div class="contact-icon">📍</div>
+                <h5>Our Address</h5>
+                <p>1234 Auto Drive<br>Chicago, IL 60601<br>United States</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="contact-card text-center">
+                <div class="contact-icon">📞</div>
+                <h5>Phone Number</h5>
+                <p>Main: +1 (800) 555-0199<br>Sales: +1 (800) 555-0188<br>Service: +1 (800) 555-0177</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="contact-card text-center">
+                <div class="contact-icon">✉️</div>
+                <h5>Email Address</h5>
+                <p>info@carsdealership.com<br>sales@carsdealership.com<br>support@carsdealership.com</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="contact-card">
+                <h5>🕒 Business Hours</h5>
+                <table class="table">
+                    <tr><td>Monday - Friday</td><td>9:00 AM - 8:00 PM</td></tr>
+                    <tr><td>Saturday</td><td>9:00 AM - 6:00 PM</td></tr>
+                    <tr><td>Sunday</td><td>11:00 AM - 5:00 PM</td></tr>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="contact-card">
+                <h5>📍 Find Us</h5>
+                <img src="https://maps.googleapis.com/maps/api/staticmap?center=Chicago,IL&zoom=13&size=400x200&key=YOUR_KEY" 
+                     alt="Map location" 
+                     class="img-fluid rounded"
+                     style="width:100%;background:#ddd;height:150px;display:flex;align-items:center;justify-content:center;">
+                <p class="mt-2">Located in the heart of Chicago, easily accessible from I-90 and I-94.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Cars Dealership. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
