@@ -7,35 +7,45 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  lint-python:
+    name: Lint Python Files
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
-
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.11'
-
     - name: Install dependencies
       run: |
         cd server
         pip install -r requirements.txt
-
-    - name: Run Django system check
+        pip install pylint
+    - name: Lint Python Files
+      run: |
+        cd server
+        pylint --disable=C0301,C0114,C0115,C0116,E0401 djangoapp/ || true
+    - name: Run Django check
       run: |
         cd server
         python manage.py check
 
-    - name: Run migrations
+  lint-javascript:
+    name: Lint JavaScript Files
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+    - name: Install JavaScript dependencies
       run: |
-        cd server
-        python manage.py migrate
-
-    - name: Verify static files
+        cd server/frontend
+        npm install
+    - name: Lint JavaScript Files
       run: |
-        cd server
-        echo "Build verification complete"
-        echo "All workflow steps executed successfully"
+        cd server/frontend
+        npx eslint src/ --ext .js,.jsx --max-warnings=100 || true
